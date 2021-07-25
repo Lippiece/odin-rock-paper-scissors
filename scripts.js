@@ -2,53 +2,56 @@ let computerPlay = (result) => {
   let index = Math.floor(Math.random() * 3)
   switch (index) {
     case 0:
-      result = "rock";
+      result = "Rock";
       break;
     case 1:
-      result = "paper";
+      result = "Paper";
       break;
     case 2:
-      result = "scissors";
+      result = "Scissors";
       break;
   }
   return result;
 };
 
-let playRound = () => {
-  userInput = prompt("Your play?", "rock");
-  computerInput = computerPlay;
-  function calcWinner() {
-    switch (userInput) {
-      case "rock":
-        switch (computerInput) {
-          case "rock":
-            return "Equals";
-          case "paper":
-            return "You win";
-          case "scissors":
-            return "You lose";
-        }
-        break;
-      case "paper":
-        switch (computerInput) {
-          case "paper":
-            return "Equals";
-          case "rock":
-            return "You win";
-          case "scissors":
-            return "You lose";
-        }
-        break;
-      case "scissors":
-        switch (computerInput) {
-          case "scissors":
-            return "Equals";
-          case "paper":
-            return "You win";
-          case "rock":
-            return "You lose";
-        }
-        break;
-    }
+let getRoundInput = () => {
+  return prompt("Your play?", "rock");
+};
+
+function calcRoundResults() {
+  playerSelection = getRoundInput();
+  computerSelection = computerPlay();
+  console.log("Comp says: " + computerSelection);
+  switch (toLowerCase(playerSelection)) {
+    case "rock":
+      switch (toLowerCase(computerSelection)) {
+        case "rock":
+          return "Equals";
+        case "paper":
+          return "You lose";
+        case "scissors":
+          return "You win";
+      }
+      break;
+    case "paper":
+      switch (toLowerCase(computerSelection)) {
+        case "paper":
+          return "Equals";
+        case "rock":
+          return "You win";
+        case "scissors":
+          return "You lose";
+      }
+      break;
+    case "scissors":
+      switch (toLowerCase(computerSelection)) {
+        case "scissors":
+          return "Equals";
+        case "paper":
+          return "You win";
+        case "rock":
+          return "You lose";
+      }
+      break;
   }
 }
