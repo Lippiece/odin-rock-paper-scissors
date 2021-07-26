@@ -22,9 +22,9 @@ function calcRoundResults() {
   playerSelection = getRoundInput();
   computerSelection = computerPlay();
   console.log("Comp says: " + computerSelection);
-  switch (toLowerCase(playerSelection)) {
+  switch (playerSelection.toLowerCase()) { // something wrong with toLowerCase()!
     case "rock":
-      switch (toLowerCase(computerSelection)) {
+      switch (computerSelection.toLowerCase()) {
         case "rock":
           return "Equals";
         case "paper":
@@ -34,7 +34,7 @@ function calcRoundResults() {
       }
       break;
     case "paper":
-      switch (toLowerCase(computerSelection)) {
+      switch (computerSelection.toLowerCase()) {
         case "paper":
           return "Equals";
         case "rock":
@@ -44,7 +44,7 @@ function calcRoundResults() {
       }
       break;
     case "scissors":
-      switch (toLowerCase(computerSelection)) {
+      switch (computerSelection.toLowerCase()) {
         case "scissors":
           return "Equals";
         case "paper":
