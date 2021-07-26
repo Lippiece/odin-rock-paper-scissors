@@ -22,7 +22,7 @@ function calcRoundResults() {
   playerSelection = getRoundInput();
   computerSelection = computerPlay();
   console.log("Comp says: " + computerSelection);
-  switch (playerSelection.toLowerCase()) { // something wrong with toLowerCase()!
+  switch (playerSelection.toLowerCase()) {
     case "rock":
       switch (computerSelection.toLowerCase()) {
         case "rock":
@@ -53,5 +53,30 @@ function calcRoundResults() {
           return "You lose";
       }
       break;
+  }
+}
+
+// play 5 games and return the summary:
+// convert strings from calcRoundResults to score
+// "equals" --> nothing
+// "you win" --> +1
+// "you lose" --> -1
+// win if score > 0
+let game = () => {
+  let score = 0;
+  for (let i = 0; i < 5; i++) {
+    switch (calcRoundResults()) {
+      case "You win":
+        score += 1;
+        break;
+      case "You lose":
+        score -= 1;
+        break;
+    }
+  }
+  if (score > 0) {
+    return `Your score is ${score}. You've won the series.`;
+  } else {
+    return `Your score is ${score}. You've lost the series.`
   }
 }
