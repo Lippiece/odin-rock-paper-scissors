@@ -1,3 +1,5 @@
+let score;
+
 let computerPlay = (result) => {
   let index = Math.floor(Math.random() * 3)
   switch (index) {
@@ -55,28 +57,40 @@ function calcRoundResults() {
       break;
   }
 }
-
-// play 5 games and return the summary:
-// convert strings from calcRoundResults to score
-// "equals" --> nothing
-// "you win" --> +1
-// "you lose" --> -1
-// win if score > 0
-let game = () => {
-  let score = 0;
+let calcScore = () => {
+  score = 0;
+  para = document.createElement("p");
+  document.querySelector("div").appendChild(para);
   for (let i = 0; i < 5; i++) {
+    text = `This is round ${i}.`
+    document.querySelector("div").appendChild(para);
     switch (calcRoundResults()) {
       case "You win":
+        text = "Round won."
+        document.querySelector("div").appendChild(para);
         score += 1;
         break;
       case "You lose":
+        text = "Round lost."
+        document.querySelector("div").appendChild(para);
         score -= 1;
         break;
     }
   }
+  return score;
+}
+let showResults = () => {
+  para = document.createElement("p");
+  document.querySelector("div").appendChild(para);
+
   if (score > 0) {
-    return `Your score is ${score}. You've won the series.`;
+    text = `Your score is ${score}. You've won the series.`;
+    para.textContent = text;
+  } else if (score < 0) {
+    text = `Your score is ${score}. You've lost the series.`;
+    para.textContent = text;
   } else {
-    return `Your score is ${score}. You've lost the series.`
+    text = `Your score is ${score}. There's no winner.`;
+    para.textContent = text;
   }
 }
