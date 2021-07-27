@@ -94,3 +94,7 @@ let showResults = () => {
     para.textContent = text;
   }
 }
+let game = () => {
+  calcScore();
+  showResults();
+}
