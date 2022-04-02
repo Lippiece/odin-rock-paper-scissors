@@ -65,16 +65,17 @@ let calcScore = () => {
 	div.appendChild(para);
 	for (let i = 0; i < 5; i++) {
 		text = `This is round ${i}.`;
+		para.textContent = text;
 		div.appendChild(para);
 		switch (calcRoundResults()) {
 			case "You win":
 				text = "Round won.";
-				div.appendChild(para);
+				para.textContent = text;
 				score += 1;
 				break;
 			case "You lose":
 				text = "Round lost.";
-				div.appendChild(para);
+				para.textContent = text;
 				score -= 1;
 				break;
 		}
