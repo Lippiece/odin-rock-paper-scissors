@@ -1,5 +1,6 @@
 let score;
 let div = document.querySelector("div");
+let para = document.createElement("p");
 
 let computerPlay = result => {
 	let index = Math.floor(Math.random() * 3);
