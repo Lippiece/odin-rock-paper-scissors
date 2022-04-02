@@ -25,7 +25,7 @@ let getRoundInput = () => {
 function calcRoundResults() {
 	playerSelection = getRoundInput();
 	computerSelection = computerPlay();
-	console.log("Comp says: " + computerSelection);
+	para.textContent = "Comp says: " + computerSelection;
 	switch (playerSelection.toLowerCase()) {
 		case "rock":
 			switch (computerSelection.toLowerCase()) {
