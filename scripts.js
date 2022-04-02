@@ -61,9 +61,7 @@ function calcRoundResults() {
 }
 let calcScore = () => {
 	score = 0;
-	para = document.createElement("p");
-	div.appendChild(para);
-	for (let i = 0; i < 5; i++) {
+	for (let i = 0; i < 1; i++) {
 		text = `This is round ${i}.`;
 		para.textContent = text;
 		div.appendChild(para);
@@ -83,7 +81,6 @@ let calcScore = () => {
 	return score;
 };
 let showResults = () => {
-	para = document.createElement("p");
 	div.appendChild(para);
 
 	if (score > 0) {
