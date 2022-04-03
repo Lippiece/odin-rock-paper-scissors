@@ -92,6 +92,7 @@ playerButton.addEventListener("click", function (e) {
 	playerLog.innerText = "You play " + playerSelection + ".";
 });
 
-let button = document.querySelector("button");
-button.addEventListener("click", function (e) {
+resultsButton.addEventListener("click", function (e) {
+	result = calcResult(playerSelection, computerSelection);
+	resultLog.innerText = result;
 });
