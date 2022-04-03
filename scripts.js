@@ -14,6 +14,8 @@ let computerSelection;
 let playerSelection;
 let result;
 
+function getCompSelection() {
+}
 
 
 let button = document.querySelector("button");
