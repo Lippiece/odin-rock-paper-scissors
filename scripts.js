@@ -1,8 +1,18 @@
 let container = document.querySelector("div");
-let log = document.createElement("p");
-let score;
+
+let paragraphs = document.querySelectorAll("p");
+let compLog = paragraphs[0];
+let playerLog = paragraphs[1];
+let resultLog = paragraphs[2];
+
+let buttons = document.querySelectorAll("button");
+let compButton = buttons[0];
+let playerButton = buttons[1];
+let resultsButton = buttons[2];
+
 let computerSelection;
 let playerSelection;
+let result;
 
 
 
