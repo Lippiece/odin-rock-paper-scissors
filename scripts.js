@@ -87,6 +87,10 @@ compButton.addEventListener("click", function (e) {
 	compLog.innerText = "Computer plays " + computerSelection + ".";
 });
 
+playerButton.addEventListener("click", function (e) {
+	playerSelection = getPlayerSelection();
+	playerLog.innerText = "You play " + playerSelection + ".";
+});
 
 let button = document.querySelector("button");
 button.addEventListener("click", function (e) {
