@@ -29,6 +29,9 @@ function getCompSelection() {
 	}
 }
 
+function getPlayerSelection() {
+}
+
 }
 
 
