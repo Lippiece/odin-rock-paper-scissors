@@ -30,6 +30,8 @@ function getCompSelection() {
 }
 
 function getPlayerSelection() {
+	let output = prompt("Your choice?", "Rock");
+	return output;
 }
 
 }
