@@ -39,20 +39,47 @@ function calcResult(you, them) {
 	them = them.toLowerCase();
 	switch (you) {
 		case "rock":
-		case "paper":
+			switch (them) {
+				case "rock":
+					return "Even.";
+					break;
+				case "paper":
+					return `Their ${them} wins your ${you}. Fuck you.`;
+					break;
+				case "scissors":
+					return `Your ${you} wins their ${them}. Fuck them.`;
+					break;
+			}
 			break;
-			break;
 		case "paper":
+			switch (them) {
+				case "rock":
+					return `Your ${you} wins their ${them}. Fuck them.`;
+					break;
+				case "paper":
+					return "Even.";
+					break;
+				case "scissors":
+					return `Their ${them} wins your ${you}. Fuck you.`;
+					break;
+			}
 			break;
 		case "scissors":
-			break;
-		case "paper":
-			break;
-			break;
-}
+			switch (them) {
+				case "rock":
+					return `Their ${them} wins your ${you}. Fuck you.`;
+					break;
+				case "paper":
+					return `Your ${you} wins their ${them}. Fuck them.`;
+					break;
+				case "scissors":
+					return "Even.";
+					break;
+			}
 			break;
 		default:
 			return "You can't play like that.";
+	}
 }
 
 
