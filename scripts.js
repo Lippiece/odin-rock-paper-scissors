@@ -34,7 +34,10 @@ function getPlayerSelection() {
 	return output;
 }
 
+function calcResult(you, them) {
 }
+}
+
 
 
 let button = document.querySelector("button");
