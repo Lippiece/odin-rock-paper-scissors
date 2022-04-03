@@ -82,6 +82,10 @@ function calcResult(you, them) {
 	}
 }
 
+compButton.addEventListener("click", function (e) {
+	computerSelection = getCompSelection();
+	compLog.innerText = "Computer plays " + computerSelection + ".";
+});
 
 
 let button = document.querySelector("button");
