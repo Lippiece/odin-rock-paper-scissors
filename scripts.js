@@ -35,6 +35,8 @@ function getPlayerSelection() {
 }
 
 function calcResult(you, them) {
+	you = you.toLowerCase();
+	them = them.toLowerCase();
 }
 }
 
