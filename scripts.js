@@ -37,7 +37,22 @@ function getPlayerSelection() {
 function calcResult(you, them) {
 	you = you.toLowerCase();
 	them = them.toLowerCase();
+	switch (you) {
+		case "rock":
+		case "paper":
+			break;
+			break;
+		case "paper":
+			break;
+		case "scissors":
+			break;
+		case "paper":
+			break;
+			break;
 }
+			break;
+		default:
+			return "You can't play like that.";
 }
 
 
