@@ -15,6 +15,7 @@ let playerSelection;
 let result;
 
 function getCompSelection() {
+	rand = Math.floor(Math.random() * 3);
 }
 
 
